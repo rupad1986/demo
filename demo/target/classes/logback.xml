@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <Pattern>%d %-5level %X{sessionID} [%thread] %logger{0}: %msg%n</Pattern>
+        </encoder>
+    </appender>
+	
+<!-- The FILE and ASYNC appenders are here as examples for a production configuration -->	
+	      <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+     <file>log/demo.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>log/demo.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+             <!-- each file should be at most 20MB, keep 3 days worth of history, but at most 2GB -->
+              <maxFileSize>10MB</maxFileSize>
+              <maxHistory>3</maxHistory>
+              <totalSizeCap>4GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <charset>utf-8</charset>
+            <Pattern>%d %-5level %X{sessionID} [%thread] %logger{0}: %msg%n</Pattern>
+        </encoder>
+    </appender>
+	
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>512</queueSize>
+        <appender-ref ref="FILE"/>
+    </appender>
+
+
+    <logger name="com.example" level="INFO"/>
+    <logger name="javax.activation" level="INFO"/>
+    <logger name="javax.xml.bind" level="INFO"/>
+    <logger name="ch.qos.logback" level="INFO"/>
+    <logger name="com.codahale.metrics" level="INFO"/>
+    <logger name="com.couchbase.client.core" level="ERROR"/>
+  	<logger name="com.sun.xml.internal" level="INFO"/>
+    <logger name="com.ryantenney" level="WARN"/>
+    <logger name="com.zaxxer" level="ERROR"/>
+    <logger name="io.undertow" level="ERROR"/>
+    <logger name="org.apache" level="INFO"/>
+    <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF"/>
+    <logger name="org.bson" level="INFO"/>
+    <logger name="org.hibernate.validator" level="INFO"/>
+    <logger name="org.hibernate" level="INFO"/>
+    <logger name="org.hibernate.ejb.HibernatePersistence" level="OFF"/>
+    <!-- <logger name="com.sun.xml.internal.bind" level="ERROR"/> -->
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.springframework.web" level="WARN"/>
+    <logger name="org.springframework.security" level="WARN"/>
+    <logger name="org.springframework.cache" level="WARN"/>
+    <logger name="org.thymeleaf" level="WARN"/>
+    <logger name="org.xnio" level="WARN"/>
+    <logger name="com.wordnik.swagger" level="warn"/>
+    <logger name="com.atomikos.icatch" level="ERROR"/>
+    <logger name="springfox.documentation" level="WARN"/>
+    <logger name="liquibase" level="warn"/>
+    <logger name="fixWindowBased" level="INFO">
+	    <appender-ref ref="FILE" />
+	</logger>
+    
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <root level="${logback.loglevel}">
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

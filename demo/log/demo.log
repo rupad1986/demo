@@ -1,0 +1,400 @@
+2019-09-07 20:50:45,176 INFO   [main] YouTubeApplication: Starting YouTubeApplication on NB3111721242 with PID 27436 (C:\project\demo\target\classes started by S799480 in C:\project\demo)
+2019-09-07 20:50:45,179 INFO   [main] YouTubeApplication: The following profiles are active: default
+2019-09-07 20:50:47,182 INFO   [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8182"]
+2019-09-07 20:50:47,200 INFO   [main] StandardService: Starting service [Tomcat]
+2019-09-07 20:50:47,201 INFO   [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-09-07 20:50:47,345 INFO   [main] [/demo]: Initializing Spring embedded WebApplicationContext
+2019-09-07 20:50:48,017 INFO   [main] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8182"]
+2019-09-07 20:50:48,073 INFO   [main] YouTubeApplication: Started YouTubeApplication in 3.548 seconds (JVM running for 8.428)
+2019-09-07 20:51:30,498 INFO   [main] YouTubeApplication: Starting YouTubeApplication on NB3111721242 with PID 28988 (C:\project\demo\target\classes started by S799480 in C:\project\demo)
+2019-09-07 20:51:30,501 INFO   [main] YouTubeApplication: The following profiles are active: default
+2019-09-07 20:51:32,282 INFO   [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8182"]
+2019-09-07 20:51:32,295 INFO   [main] StandardService: Starting service [Tomcat]
+2019-09-07 20:51:32,296 INFO   [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-09-07 20:51:32,419 INFO   [main] [/demo]: Initializing Spring embedded WebApplicationContext
+2019-09-07 20:51:33,079 INFO   [main] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8182"]
+2019-09-07 20:51:33,114 INFO   [main] YouTubeApplication: Started YouTubeApplication in 3.239 seconds (JVM running for 7.77)
+2019-09-07 20:51:55,082 INFO   [http-nio-8182-exec-2] [/demo]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-07 20:51:55,600 INFO   [http-nio-8182-exec-2] HttpTransport: -------------- REQUEST  --------------
+GET https://www.googleapis.com/youtube/v3/search?fields=items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)&key=AIzaSyCSPLeGloe3t80sjqECTGC8g7IT3bGcW88&maxResults=25&part=id,snippet&q=telecom&type=video
+Accept-Encoding: gzip
+User-Agent: youTubeProject Google-API-Java-Client Google-HTTP-Java-Client/1.22.0 (gzip)
+
+2019-09-07 20:51:55,601 INFO   [http-nio-8182-exec-2] HttpTransport: curl -v --compressed -H 'Accept-Encoding: gzip' -H 'User-Agent: youTubeProject Google-API-Java-Client Google-HTTP-Java-Client/1.22.0 (gzip)' -- 'https://www.googleapis.com/youtube/v3/search?fields=items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)&key=AIzaSyCSPLeGloe3t80sjqECTGC8g7IT3bGcW88&maxResults=25&part=id,snippet&q=telecom&type=video'
+2019-09-07 20:51:56,524 DEBUG  [http-nio-8182-exec-2] HttpURLConnection: sun.net.www.MessageHeader@3dc833cd6 pairs: {GET /youtube/v3/search?fields=items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)&key=AIzaSyCSPLeGloe3t80sjqECTGC8g7IT3bGcW88&maxResults=25&part=id,snippet&q=telecom&type=video HTTP/1.1: null}{Accept-Encoding: gzip}{User-Agent: youTubeProject Google-API-Java-Client Google-HTTP-Java-Client/1.22.0 (gzip)}{Host: www.googleapis.com}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+2019-09-07 20:51:56,858 DEBUG  [http-nio-8182-exec-2] HttpURLConnection: sun.net.www.MessageHeader@55824f5015 pairs: {null: HTTP/1.1 200 OK}{Expires: Sat, 07 Sep 2019 16:51:56 GMT}{Date: Sat, 07 Sep 2019 16:51:56 GMT}{Cache-Control: private, max-age=120, must-revalidate, no-transform}{ETag: "8jEFfXBrqiSrcF6Ee7MQuz8XuAM/fZ7LrUmBRiI-1-RcG-zA4bBhwmA"}{Vary: Origin}{Vary: X-Origin}{Content-Type: application/json; charset=UTF-8}{Content-Encoding: gzip}{X-Content-Type-Options: nosniff}{X-Frame-Options: SAMEORIGIN}{X-XSS-Protection: 1; mode=block}{Server: GSE}{Alt-Svc: quic=":443"; ma=2592000; v="46,43,39"}{Transfer-Encoding: chunked}
+2019-09-07 20:51:56,868 INFO   [http-nio-8182-exec-2] HttpTransport: -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: quic=":443"; ma=2592000; v="46,43,39"
+Server: GSE
+X-Content-Type-Options: nosniff
+Date: Sat, 07 Sep 2019 16:51:56 GMT
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private, max-age=120, must-revalidate, no-transform
+ETag: "8jEFfXBrqiSrcF6Ee7MQuz8XuAM/fZ7LrUmBRiI-1-RcG-zA4bBhwmA"
+Content-Encoding: gzip
+Vary: X-Origin
+Vary: Origin
+Expires: Sat, 07 Sep 2019 16:51:56 GMT
+X-XSS-Protection: 1; mode=block
+Content-Type: application/json; charset=UTF-8
+
+2019-09-07 20:51:56,930 INFO   [http-nio-8182-exec-2] HttpTransport: Total: 7,544 bytes
+2019-09-07 20:51:56,933 INFO   [http-nio-8182-exec-2] HttpTransport: {
+ "items": [
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "jPaHVe1U1SM"
+   },
+   "snippet": {
+    "title": "Telecommunications Basics Part 1",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/jPaHVe1U1SM/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "pPqjvus2ZEc"
+   },
+   "snippet": {
+    "title": "15 Things You Didn’t Know About The Telecommunication Industry",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/pPqjvus2ZEc/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "RMCdOOgYt5I"
+   },
+   "snippet": {
+    "title": "telecom training video - telecom engineer | telecommunication system tutorial basics in hindi",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/RMCdOOgYt5I/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "Nnl8z3uhDgE"
+   },
+   "snippet": {
+    "title": "Basic telecom technology lecture-1",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Nnl8z3uhDgE/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "CI9No9Ci9Ro"
+   },
+   "snippet": {
+    "title": "What is 1G, 2G, 3G, 4G, 5G of Cellular Mobile Communications - Wireless Telecommunications",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/CI9No9Ci9Ro/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "LOHfKSmWXVM"
+   },
+   "snippet": {
+    "title": "Globe Telecom - SMS / Text Explained",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/LOHfKSmWXVM/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "LLwuxh75w24"
+   },
+   "snippet": {
+    "title": "The Upcoming Revolution in the Telecom Sector - Full Session - WGS 2019",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/LLwuxh75w24/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "tHFXxwdJEe4"
+   },
+   "snippet": {
+    "title": "Telecom Sector Skill Council |(TSSC) | PMKVY",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/tHFXxwdJEe4/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "JxEQzVzVYPc"
+   },
+   "snippet": {
+    "title": "Life in a Telecom Short Film by technical sandy",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/JxEQzVzVYPc/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "7G2JkXHbklk"
+   },
+   "snippet": {
+    "title": "Telecom Sector Crisis in India भारत में दूरसंचार क्षेत्र का संकट - Will it survive the Jio battle?",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/7G2JkXHbklk/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "iaxx3Cg2Kbs"
+   },
+   "snippet": {
+    "title": "A Career in Telecommunications (JTJS82013)",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/iaxx3Cg2Kbs/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "HmbfNegdLq8"
+   },
+   "snippet": {
+    "title": "telecom interview questions and answers || Most IMP telecom interview questions list explain",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/HmbfNegdLq8/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "as_ZpcwtQnk"
+   },
+   "snippet": {
+    "title": "What&#39;s That Infrastructure? (Ep. 5 - Wireless Telecommunications)",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/as_ZpcwtQnk/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "E1lqCLS_P2Q"
+   },
+   "snippet": {
+    "title": "Life in a telecom a day with rigger by technical sandy",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/E1lqCLS_P2Q/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "FDWRqASdYlM"
+   },
+   "snippet": {
+    "title": "Top 7 Telecom Companies of the World 2017",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/FDWRqASdYlM/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "1QXBdo-kXo8"
+   },
+   "snippet": {
+    "title": "Telecom wiring color code",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/1QXBdo-kXo8/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "sLwH0jPZae8"
+   },
+   "snippet": {
+    "title": "What is the Telecommunication &amp; Telecom in HINDI | Technical Alokji",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/sLwH0jPZae8/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "oeNmLaivK5k"
+   },
+   "snippet": {
+    "title": "Madeshi V/s Telecom||PN Vines",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/oeNmLaivK5k/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "G4cGEN5SSvc"
+   },
+   "snippet": {
+    "title": "टेलिकॉम इंडस्ट्री में करियर | Start Career In Telecom Industry | Jobs, Education, Recruitment etc.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/G4cGEN5SSvc/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "JACnK0avijs"
+   },
+   "snippet": {
+    "title": "Future of telecommunications, technology and business: futurist speaker Gerd Leonhard",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/JACnK0avijs/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "feSQdYG9Ayg"
+   },
+   "snippet": {
+    "title": "Explication des métiers ingénieur réseaux et télécom - CNS Communications",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/feSQdYG9Ayg/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "v-IkGJzLq1k"
+   },
+   "snippet": {
+    "title": "Drive test (DT) in telecom 2g,3g,4g",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/v-IkGJzLq1k/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "WuGeyAn5akk"
+   },
+   "snippet": {
+    "title": "V1: Fundamentals of Telecom 1 - Introduction and Preview",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/WuGeyAn5akk/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "cVqZ1h4F7AM"
+   },
+   "snippet": {
+    "title": "Tounsi w zayak min -  \u202bتونسي و زيّك مين\u202c",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/cVqZ1h4F7AM/default.jpg"
+     }
+    }
+   }
+  },
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "Cq59klG8umU"
+   },
+   "snippet": {
+    "title": "Career in Telecommunications, telecom sector jobs, education and salary in Hindi, Top institute list",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Cq59klG8umU/default.jpg"
+     }
+    }
+   }
+  }
+ ]
+}
+
+2019-09-07 20:51:56,942 INFO   [http-nio-8182-exec-2] Search: Input search string : {fields=items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url), key=AIzaSyCSPLeGloe3t80sjqECTGC8g7IT3bGcW88, maxResults=25, part=id,snippet, q=telecom, type=video} 
+2019-09-07 20:51:56,945 INFO   [http-nio-8182-exec-2] Search: searchResult IN writeToFile 25 

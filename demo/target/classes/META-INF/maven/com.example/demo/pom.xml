@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.8.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo</name>	
+	<packaging>jar</packaging>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.youtube.version>v3-rev182-1.22.0</project.youtube.version>
+		<ch.qos.logback.version>1.2.3</ch.qos.logback.version>
+		  <docker.image.prefix>springio</docker.image.prefix>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+        <groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+   		 <groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+			<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.gdata/core -->
+		<dependency>
+		    <groupId>com.google.gdata</groupId>
+		    <artifactId>core</artifactId>
+		    <version>1.47.1</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-access</artifactId>
+                </dependency>
+            <dependency>
+			    <groupId>com.googlecode.json-simple</groupId>
+			    <artifactId>json-simple</artifactId>
+			    <version>1.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				</dependency>
+			 <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-youtube</artifactId>
+            <version>${project.youtube.version}</version>
+        </dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				 <version>2.19.1</version>
+				  <executions>
+        <execution>
+            <id>unpack</id>
+            <phase>package</phase>
+            <goals>
+                <goal>unpack</goal>
+            </goals>
+            <configuration>
+                <artifactItems>
+                    <artifactItem>
+                        <groupId>${project.groupId}</groupId>
+                        <artifactId>${project.artifactId}</artifactId>
+                        <version>${project.version}</version>
+                    </artifactItem>
+                </artifactItems>
+            </configuration>
+        </execution>
+    </executions>
+			</plugin>
+			<plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>dockerfile-maven-plugin</artifactId>
+            <version>1.4.9</version>
+            <configuration>
+                <repository>${docker.image.prefix}/${project.artifactId}</repository>
+            </configuration>
+        </plugin>
+		</plugins>
+	</build>
+
+</project>
